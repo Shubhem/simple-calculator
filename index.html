@@ -54,21 +54,21 @@
 
         /* Button colors */
         .clear {
-            background-color: #e74c3c; /* Red for clear button */
+            background-color: #f5b7b1; /* Light red for clear button */
         }
 
         .equals {
-            background-color: #27ae60; /* Green for equals button */
+            background-color: #a9dfbf; /* Light green for equals button */
         }
 
         /* Color for number buttons */
         .number {
-            background-color: #3498db; /* Blue for number buttons */
+            background-color: #aed6f1; /* Light blue for number buttons */
         }
 
         /* Color for operation buttons */
         .operator {
-            background-color: #f39c12; /* Orange for operator buttons */
+            background-color: #f9e79f; /* Light orange for operator buttons */
         }
     </style>
 </head>
@@ -90,38 +90,4 @@
             <button class="operator" onclick="appendToDisplay('*')">*</button>
         </div>
         <div>
-            <button class="number" onclick="appendToDisplay('1')">1</button>
-            <button class="number" onclick="appendToDisplay('2')">2</button>
-            <button class="number" onclick="appendToDisplay('3')">3</button>
-            <button class="operator" onclick="appendToDisplay('-')">-</button>
-        </div>
-        <div>
-            <button class="number" onclick="appendToDisplay('0')">0</button>
-            <button class="equals" onclick="calculateResult()">=</button>
-            <button class="operator" onclick="appendToDisplay('+')">+</button>
-        </div>
-    </div>
-
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
-
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
-
-        function calculateResult() {
-            const display = document.getElementById('display');
-            try {
-                // Evaluate the expression using the Function constructor
-                const result = new Function('return ' + display.value)();
-                display.value = result;
-            } catch (error) {
-                display.value = 'Error';
-            }
-        }
-    </script>
-</body>
-
-</html>
+            <button class="number" onclic
